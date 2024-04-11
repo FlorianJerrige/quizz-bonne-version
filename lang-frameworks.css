@@ -1,0 +1,236 @@
+
+
+body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0; /* Pour enlever la marge par défaut */
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #007BFF;/* Ajustez la couleur de fond au besoin */
+    width: 100%; /* Fait en sorte que la navbar prenne toute la largeur */
+    box-sizing: border-box; /* S'assure que le padding ne déborde pas la largeur de 100% */
+    position: fixed; /* Optionnel: fixe la navbar en haut de la page lors du défilement */
+    top: 0; /* Utilisé avec position: fixed */
+    left: 0; /* Utilisé avec position: fixed */
+    z-index: 1000; /* S'assure que la navbar reste au-dessus des autres éléments */
+    
+}
+
+
+/* Style pour le bouton du menu */
+.dropbtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.dropbtn i {
+    font-size: 30px; /* Ajustez la taille de l'icône */
+}
+
+/* Container pour les éléments du menu */
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Contenu du menu caché par défaut */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Liens à l'intérieur du menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Montrer le menu au survol */
+.menu-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Changer la couleur de fond des liens au survol */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Bouton du menu au survol */
+.menu-dropdown:hover .dropbtn {
+    background-color: #0056b3;
+}
+
+
+
+.linkedin-logo img {
+    height: 30px; /* Ajustez la taille au besoin */
+    float: right;
+}
+
+.quiz-body {
+    position: fixed; /* ou absolute, si nécessaire */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+  
+
+#logo-container {
+    position: absolute;
+    left: 50%; /* Centrer le logo horizontalement */
+    margin-top: 30px; /* Ajustez cette valeur si nécessaire pour l'espacement */
+    transform: translateX(-50%);
+    top: calc(60px + 5px); /* 60px est la hauteur de la navbar et 20px est une marge additionnelle */
+    z-index: 500; /* S'assurer qu'il est affiché au-dessus des autres éléments, mais moins que la navbar */
+}
+
+
+
+#quiz-logo {
+    width: 150px; /* ou la taille que vous désirez */
+    height: auto; /* pour conserver les proportions de l'image */
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .bounce {
+    animation: bounce 0.5s;
+  }
+
+  @keyframes tearDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+#tear {
+    position: absolute;
+    top: 62px; /* Distance du haut de l'écran */
+    right: 40px; /* Distance du côté droit de l'écran */
+    font-size: 24px; /* Ajustez la taille de l'emoji/élément larme */
+    animation: tearDrop 2s ease-in-out;
+    display: none; /* Cachez la larme par défaut */
+}
+
+  
+
+
+#quiz-title h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #007BFF; /* Ajustez la couleur selon vos préférences */
+    margin-bottom: 20px;
+}
+
+#start-quiz-btn, #next {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#start-quiz-btn:hover, #next:hover {
+    background-color: #0056b3;
+}
+
+.question_number {
+    padding-bottom: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#quiz-container, #start-page {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.correct-answer, .wrong-answer {
+    color: white;
+}
+
+.correct-answer {
+    background-color: #4CAF50; /* Vert */
+}
+
+.wrong-answer {
+    background-color: #f44336; /* Rouge */
+}
+
+#explanation {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px;
+    margin-left: 250px; /* Ajout d'une marge à gauche */
+    margin-right: 250px; /* Ajout d'une marge à droite */
+    background-color: #ffedb8; /* Couleur de fond légère */
+    border-radius: 10px;
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+
+
+

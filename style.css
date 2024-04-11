@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    min-height: 100vh; /* Assurez-vous que le body prend au moins la hauteur totale de la fenêtre d'affichage */
+    margin: 0; /* Supprime les marges par défaut */
+    flex-direction: column; /* Organise les éléments en colonne */
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(235, 236, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #007BFF;/* Ajustez la couleur de fond au besoin */
+    width: 100%; /* Fait en sorte que la navbar prenne toute la largeur */
+    box-sizing: border-box; /* S'assure que le padding ne déborde pas la largeur de 100% */
+    position: fixed; /* Optionnel: fixe la navbar en haut de la page lors du défilement */
+    top: 0; /* Utilisé avec position: fixed */
+    left: 0; /* Utilisé avec position: fixed */
+    z-index: 1000; /* S'assure que la navbar reste au-dessus des autres éléments */
+}
+
+
+.logo-container img {
+    height: 50px; /* Ajustez la taille au besoin */
+    /* Centrer le logo si nécessaire */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.linkedin-logo img {
+    height: 30px; /* Ajustez la taille au besoin */
+    float: right;
+}
+
+.question_number {
+    padding-bottom: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bi-translate {
+    margin-right: 30px;
+    transform: scale(2); /* Double la taille de l'élément */
+}
+
+.bi-boxes {
+    margin-right: 30px;
+    transform: scale(2); /* Double la taille de l'élément */
+}
+
+.bi-briefcase {
+    margin-right: 30px;
+
+    transform: scale(2); /* Double la taille de l'élément */
+
+}
+
+.bi-hourglass-split{
+    transform: scale(2); /* Double la taille de l'élément */
+    margin-right: 20px;
+}
+
+.bi-flag {
+    transform: scale(2); /* Double la taille de l'élément */
+    margin-right: 20px;
+}
+
+
+#home-container h1 {
+    color: #494848;
+}
+
+
+
+.theme-selection {
+    display: flex;
+    flex-direction: column; /* Organise les éléments en colonne */
+    align-items: center; /* Centre les vignettes verticalement */
+    
+    margin-top: 20px;
+ 
+    
+}
+
+
+.theme {
+    display: flex;
+    background-color: #007BFF;
+    color: white;
+    padding: 30px; /* Ajustement pour un meilleur rendu visuel */
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    width: 500px; /* Largeur fixe pour toutes les vignettes */
+    height: 150px; /* Hauteur fixe pour toutes les vignettes */
+    box-sizing: border-box; /* S'assurer que padding est inclus dans la hauteur/la largeur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+.theme:hover {
+    background-color: #0056b3;
+}
+

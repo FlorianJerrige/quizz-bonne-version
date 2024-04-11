@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz de développement informatique</title>
+    <link rel="stylesheet" href="métiers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-dropdown">
+            <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+                <a href="index.html">Accueil</a>
+                <a href="lang-frameworks.html">Langages et Frameworks</a>
+                <a href="dev-practices.html">Les Bonnes Pratiques</a>
+                <a href="métiers.html">Pour aller plus loin !</a>
+            </div>
+        </div>
+        <div class="linkedin-logo">
+            <a href="https://www.linkedin.com/company/tech-a-way-eu/" target="_blank">
+                <img src="linkedin-logo-blanc.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+
+    <div id="logo-container">
+        <img src="taw-logo.png" alt="Logo du Quiz" id="quiz-logo">
+        <div id="tear" style="display: none;">💧</div> <!-- Représentation simplifiée de la larme -->
+
+    </div>
+    <div id="quiz-title">
+    </div>
+    <div class="quiz-body">
+        <div id="start-page">
+            <h1 id="quiz-title">Pour aller plus loin !</h1>
+            <button id="start-quiz-btn">Lancer le quizz !</button>        </div>
+            <div id="question-number" class="question_number"></div>
+        <div id="quiz-container" style="display:none;">
+            <div id="question"></div>
+            <ul id="options">
+                <!-- Les options seront injectées ici par JavaScript -->
+            </ul>
+            <button id="next">Suivante</button>
+        </div>
+        <div id="explanation" style="display:none;"></div> <!-- Ajoutez cette ligne -->
+
+    </div>
+    <script src="métiers.js"></script>
+</body>
+</html>

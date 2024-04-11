@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#logo-container {
+    position: absolute;
+    top: 0; /* Ajustez cette valeur pour contrôler l'espace au-dessus du logo */
+    left: 50%; /* Centrer le logo horizontalement */
+    transform: translateX(-50%); /* Ajustement fin pour le centrage horizontal */
+    margin-top: 50px; /* Ajustez cette valeur si nécessaire pour l'espacement */
+}
+
+#quiz-logo {
+    width: 150px; /* ou la taille que vous désirez */
+    height: auto; /* pour conserver les proportions de l'image */
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .bounce {
+    animation: bounce 0.5s;
+  }
+
+  @keyframes tearDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+#tear {
+    position: absolute;
+    top: 62px; /* Distance du haut de l'écran */
+    right: 40px; /* Distance du côté droit de l'écran */
+    font-size: 24px; /* Ajustez la taille de l'emoji/élément larme */
+    animation: tearDrop 2s ease-in-out;
+    display: none; /* Cachez la larme par défaut */
+}
+
+  
+
+
+#quiz-title h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #007BFF; /* Ajustez la couleur selon vos préférences */
+    margin-bottom: 20px;
+}
+
+#start-quiz-btn, #next {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#start-quiz-btn:hover, #next:hover {
+    background-color: #0056b3;
+}
+
+#quiz-container, #start-page {
+    text-align: center;
+}
+
+.question_number {
+    padding-bottom: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    border: 2px solid #007BFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.correct-answer, .wrong-answer {
+    color: white;
+}
+
+.correct-answer {
+    background-color: #4CAF50; /* Vert */
+}
+
+.wrong-answer {
+    background-color: #f44336; /* Rouge */
+}
+
+#explanation {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    border-radius: 5px;
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+
+
+
